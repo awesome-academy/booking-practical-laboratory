@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github) {|repo|"https://github.com/#{repo}.git"}
+git_source(:github){|repo| "https://github.com/#{repo}.git"}
 ruby "2.5.3"
 
 gem "bcrypt", "~> 3.1.7"
@@ -11,6 +11,7 @@ gem "jbuilder", "~> 2.5"
 gem "mysql2", "~> 0.5.2"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.2"
+gem "rubocop", "~> 0.54.0", require: false
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
