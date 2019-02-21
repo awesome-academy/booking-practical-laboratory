@@ -1,0 +1,392 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'color';
+
+body {
+  background: $trang;
+}
+
+.wrapper {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+  color: $xam;
+  font-family: "lato-regular", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bolder 
+}
+
+h1 {
+  font-size: 2em; 
+  margin: .67em 0; 
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em; 
+  margin: .75em 0;
+}
+
+h3 {
+  font-size: 1.17em; 
+  margin: .83em 0;
+}
+
+h5 {
+  font-size: .83em; 
+  margin: 1.5em 0;
+}
+
+h6 {
+  font-size: .75em; 
+  margin: 1.67em 0;
+}
+
+.clearfix:before,  
+.clearfix:after {  
+  content: " ";  
+  display: table;  
+}  
+
+.clearfix:after {  
+  clear: both;  
+}  
+ 
+.clearfix {  
+  *zoom: 1;  
+}
+/*  header Section  */
+header {
+  width: 100%;
+  height: 100px;
+  background: $header_corlor;
+}
+
+header .logo {
+  margin-top: 40px;
+  float: left;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  margin-top: 40px;
+  list-style: none;
+  overflow: hidden;
+  float: left;
+}
+
+header nav ul li {
+  float: left;
+  margin-left: 50px;
+}
+
+header nav ul li a,
+header nav .signup_btn {
+  text-decoration: none;
+  color: $trang;
+  font-family: "lato-regular", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+header nav ul li a:hover {
+  color: white
+}
+
+header nav .signup_btn {
+  float: right;
+  margin: 30px 0 0 50px;
+  padding: 10px 30px 11px 30px;
+  border: 2px solid $trang;
+  background: transparent;  
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -o-transition: all .1s linear;
+}
+/*  Search Section  */
+
+.search {
+  width: 100%;
+  height: 100px;
+  background: $search;
+  position: relative;
+}
+
+.search #search {
+  display: block;
+  width: 1000px;
+  height: 100px;
+  float: left;
+  border: 0;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  background: $search;
+  color: $trang;
+  font-family: "lato-regular", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+.search #search::-webkit-input-placeholder {
+  color: $xanh;
+}
+
+.search #search:-moz-placeholder { 
+  color: $xanh;  
+}
+
+.search #search::-moz-placeholder { 
+  color: $xanh;  
+}
+
+.search #search:-ms-input-placeholder {  
+  color: $xanh;  
+} 
+
+.search #submit_search {
+  display: none;
+}
+
+.search .advanced_search_icon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  float: right;
+  margin-top: 37px;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+}
+
+.search .advanced_search_icon:hover {
+  background: url("advanced_search_hover.png") no-repeat;
+}
+
+.search .advanced_search_icon.active {
+  background: url("advanced_search_active.png") no-repeat;
+}
+
+.search .advanced_search .arrow {
+  display: block;
+  width: 14px;
+  height: 9px;
+  background: url("search_arrow.png") no-repeat;
+  position: absolute;
+  top: -8px;
+  right: 6px;
+}
+/*  listings section  */
+.listings {
+  padding: 100px 0;
+}
+
+.listings ul.properties_list {
+  list-style: none;
+  overflow: hidden;
+}
+
+.listings ul.properties_list li {
+  display: block;
+  width: 340px;
+  height: auto;
+  position: relative;
+  float: left;
+  margin: 0 40px 40px 0;
+}
+
+.listings ul.properties_list li img.property_img {
+  width: 100%;
+  height: auto!important;
+  vertical-align: top;
+}
+
+.listings ul.properties_list li:nth-child(3n+0) {
+  margin-right: 0;
+}
+
+.listings ul li .property_details {
+  width: 298px;
+  padding: 10px 20px 14px 20px;
+  border-bottom: 1px solid $trang;
+  border-left: 1px solid $trang;
+  border-right: 1px solid $trang;  
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+}
+
+.listings ul li:hover .property_details {
+  border-bottom: 1px solid $xanh;
+  border-left: 1px solid $xanh;
+  border-right: 1px solid $xanh;
+}
+
+.listings ul li .property_details h1 {
+  color: $xam;
+  font-family: "lato-bold", Helvetica, Arial, sans-serif;
+  font-size: 16px!important;
+  font-weight: bold;
+  margin-bottom: 5px;
+  line-height: 28px;
+}
+
+.listings ul li .property_details h1 a {
+  text-decoration: none;
+  color: $xam;
+}
+
+.listings ul li .property_details h2 {
+  color: $xam;
+  font-family: "lato-regular", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 26px;
+}
+
+.listings ul li .property_details .property_size {
+  color: $xam;
+}
+
+.listings .more_listing {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 84px 0 22px 0;
+}
+
+.listings .more_listing_btn {
+  text-decoration: none;
+  padding: 20px 40px;
+  border: 2px solid $search;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  color: $xanh;
+  font-family: "lato-regular", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+}
+
+/*  footer  */
+footer {
+  padding-top: 0;
+  background: $xanh;
+}
+
+footer .footer > ul {
+  overflow: hidden;
+}
+
+footer .footer > ul > li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin-right: 60px;
+}
+
+footer .footer > ul > li:last-child {
+  margin-right: 0;
+}
+
+footer .footer > ul > li.about {
+  width: 327px;
+}
+
+footer ul li.about p {
+  color: $trang;
+  font-family: "lato-regular", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 34px;
+  margin-top: -9px;
+}
+
+footer ul li.about > ul > li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+footer ul li.about > ul > li:last-child {
+  margin-right: 0;
+}
+
+footer ul li.about > ul > li a {
+  background: url("../img/social_media.png") no-repeat;
+}
+
+footer ul li.about > ul > li a.facebook {
+  display: block;
+  width: 10px;
+  height: 18px;
+  background-position: 0 0;
+}
+footer ul li.about > ul > li a.twitter {
+  display: block;
+  width: 19px;
+  height: 18px;
+  background-position: -11px 0;
+}
+footer ul li.about > ul > li a.google {
+  display: block;
+  width: 10px;
+  height: 18px;
+  background-position: -31px 0;
+}
+footer ul li.about > ul > li a.skype {
+  display: block;
+  width: 17px;
+  height: 18px;
+  background-position: -43px 0;
+}
+
+footer .copyrights {
+  display: block;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 60px;
+  color: $trang;
+  font-family: "lato-regular", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: .5px;
+  border-top: 1px solid $footer_color;
+}
+
+footer .copyrights a.ph_link {
+  font-family: "Lato-bold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+.img {
+  width: 1290px;
+  height: 600px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.content_img {
+  width: 298px;
+  height: 280px;
+}
+.footer_img {
+  width: 100px;
+  height: 100px;
+}
