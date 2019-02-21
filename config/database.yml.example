@@ -2,19 +2,19 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  database: "root"
-  username: ""
+  database: "booking"
+  username: "root"
   password: ""
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: ""
+  database: "booking"
 
 test:
   <<: *default
-  database: ""
+  database: "booking"
 
 production:
   <<: *default
-  database: ""
+  database: "booking"
