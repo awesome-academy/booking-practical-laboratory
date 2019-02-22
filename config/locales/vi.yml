@@ -21,17 +21,23 @@ vi:
       menu_logout: "Đăng xuất"
       menu_view: "Xem"
       menu_users: "Người dùng"
-      caption: "Đăng ký phòng thực hành" 
+      caption: "Đăng ký phòng thực hành"
     footer:
       content: "Trang được viết bởi sinh viên trường đại học Công Nghiệp Hà Nội"
       link: "http://dhcnhn.vn"
   sessions:
     new:
-      title: "Trang đăng nhập"
-      login_button: "Đăng nhập"
-      remmember: "Nhớ tài khoản"
-      h1: "Form đăng nhập"
-  controllers:
-    users_controller: 
-      content_users: "Chào mừng bạn đến với trang đặt phòng thực hành"
-      content_errousers: "Lỗi" 
+      title: "Đăng nhập"
+      login_button: "Log in"
+  users:
+    index:
+      title: Danh sách đăng nhập
+      create: Tạo
+    user:
+      delete: Xóa
+      sure: Chắc chưa?
+    controller:
+      destroy_success: Xóa
+      destroy_danger: Không xóa được
+      find_success: Đã tìm thấy
+      find_danger: Không tìm thấy người dùng này
