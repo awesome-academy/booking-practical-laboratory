@@ -6,7 +6,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :password_digest
       t.boolean :activate
       t.boolean :admin
-      t.integer :phone
       t.string :team
 
       t.timestamps

@@ -30,6 +30,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/database.yml
+view/rooms
+view/time_sheets
+views/rooms/new.html.erb
 
 # Ignore application configuration
 /config/application.yml

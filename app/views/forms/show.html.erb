@@ -1,0 +1,28 @@
+<% provide :title %>
+<h1><%= t ".showform" %> </h1>
+<div class="row">
+  <aside class="col-md-4">
+      <table class="showform">
+          <tr>
+            <th><%= t ".phone" %></th>
+            <td><%= @forms.phone %></td>
+          </tr>
+          <tr>
+            <th><%= t ".name" %></th>
+            <td><%= @forms.user.name %></td>
+          </tr>
+          <tr>
+            <th><%= t ".room" %></th>
+            <td><%= @forms.room.name %></td>
+          </tr>
+          <tr>
+            <th><%= t ".time" %></th>
+            <td><%= @forms.room.time_sheets.find_by(id: @forms.time_id).time %></td>
+          </tr>
+          <tr>
+            <th><%= t ".intent" %></th>
+            <td><%= @forms.intent %></td>
+          </tr>
+      </table>
+  </aside>
+</div>

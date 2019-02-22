@@ -14,8 +14,10 @@ ActiveRecord::Schema.define(version: 2019_02_22_015218) do
 
   create_table "forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "status"
+    t.integer "room_id"
+    t.integer "time_id"
     t.string "intent"
+    t.integer "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_02_22_015218) do
 
   create_table "time_sheets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "room_id"
-    t.integer "form_id"
     t.datetime "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -44,7 +45,6 @@ ActiveRecord::Schema.define(version: 2019_02_22_015218) do
     t.string "password_digest"
     t.boolean "activate"
     t.boolean "admin"
-    t.integer "phone"
     t.string "team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
