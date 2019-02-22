@@ -1,0 +1,46 @@
+<% provide :title, t(".title") %>
+<%= link_to image_tag("header1.jpg", class: "img") %>
+<section class="search">
+  <div class="wrapper">
+		<input type="search" id="search" name="search" placeholder = 
+		  <%= t(".search") %> autocomplete="off"/>
+    <input type="submit" id="submit_search" name="submit_search"/>
+		<%= link_to image_tag("advanced_search_inactive.png", 
+		  class: "advanced_search_icon", id: "advanced_search_btn") %>
+  </div>
+</section>
+<section class="listings">
+  <div class="wrapper">
+    <ul class="properties_list">
+      <li class="property_img">
+          <%= link_to image_tag("pm1.jpg", class: "content_img") %>
+    	  <div class="property_details">
+    	    <h1><%= link_to t(".view"), "#" %></h1>
+    	    <h2><%= t".content_pma" %></h2>
+    	  </div>
+      </li>
+      <li class="property_img">
+    	  <%= link_to image_tag("pm2.jpg", class: "content_img") %>
+    	  <div class="property_details">
+    	    <h1><%= link_to t(".view"), "#" %></h1>
+    	    <h2><%= t".content_pmb" %></h2>
+    	  </div>
+      </li>
+      <br>
+      <li class="property_img">
+    	  <%= link_to image_tag("pm3.jpg", class: "content_img") %>
+    	  <div class="property_details">
+    	    <h1><%= link_to t(".view"), "#" %></h1>
+    	    <h2><%= t".content_pmc" %></h2>
+    	  </div>
+      </li>
+    	<li class="property_img">
+    	  <%= link_to image_tag("pm4.jpg", class: "content_img") %>
+    	  <div class="property_details">
+    	    <h1><%= link_to t(".view"), "#" %></h1>
+    	    <h2><%= t".content_pmd" %></h2>
+    	  </div>
+      </li>
+    </ul>
+  </div>
+</section>
