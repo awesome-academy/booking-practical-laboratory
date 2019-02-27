@@ -1,16 +1,26 @@
-<section class="hero">
+<section>
   <header>
-    <div class="wrapper">
-      <a><%= link_to image_tag("dh cong nghiep.jpg", class: "footer_img") %></a>
-      <nav>
+    <div class="logo">
+      <%= link_to image_tag("dh cong nghiep.jpg", class: "header_img"), root_path %>
+    </div>
+      <div class="menu">
         <ul>
-          <li><%= link_to t(".menu_home"), home_path %></li>
+          <li><%= link_to t(".menu_home"), root_path %></li>
           <li><%= link_to t(".menu_about"), "#" %></li>
           <li><%= link_to t(".menu_login"), "#" %></li>
-          <li><%= link_to t(".menu_English"), locale:"en" %></li>
-          <li><%= link_to t(".menu_Vietnamese"), locale:"vi" %><li>
+          <li><%= link_to t(".menu_users"), users_path %></li>
+          <li><%= link_to t(".menu_english"), locale:"en" %></li>
+          <li><%= link_to t(".menu_vietnamese"), locale:"vi" %></li>
+          <li class="dropdown">
+            <%= link_to t(".menu_more"), "#", class:"dropbtn" %>
+              <div class="dropdown-content">
+                <%= link_to t(".menu_view"), "#" %>
+                <%= link_to t(".menu_registration"), "#" %>
+                <%= link_to t(".menu_setting"), "#" %>
+                <%= link_to t(".menu_logout"), "#" %>
+              </div>
+            </li>
         </ul>
-      </nav>
-    </div>
-  </header>  
+      </div>
+  </header>
 </section>

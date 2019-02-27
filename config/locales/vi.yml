@@ -13,10 +13,23 @@ vi:
       menu_home: "Trang chủ"
       menu_about: "Giới thiệu"
       menu_login: "Đăng nhập"
-      menu_English: "Tiếng Anh"
-      menu_Vietnamese: "Tiếng Việt"
-      h2: "Đặt phòng thực hành"
-      h3: "Giáo viên-Phòng-Sinh viên"
+      menu_english: EN
+      menu_vietnamese: VI
+      menu_more: Them
+      menu_registration: Dang ky
+      menu_setting: Cai dat
+      menu_logout: Dang xuat
+      menu_view: Xem
+      menu_users: Users
+      caption: Dang ky phòng thực hành truc tuyen
     footer:
       content: "Trang được viết bởi sinh viên trường đại học Công Nghiệp Hà Nội"
       link: "http://dhcnhn.vn"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      login_button: "Log in"
+  users:
+    index:
+      title: Danh sách đăng nhập
+      create: Tạo

@@ -1,4 +1,6 @@
 en:
+  success: Founded!
+  danger: Not founded!
   static_pages:
     home:
       title: "Home"
@@ -13,10 +15,15 @@ en:
       menu_home: "Home"
       menu_about: "About"
       menu_login: "Login"
-      menu_English: "English"
-      menu_Vietnamese: "Vietnamese"
-      h2: "Booking Practice Room"
-      h3: "Teacher - Room - Student"
+      menu_english: EN
+      menu_vietnamese: VI
+      menu_users: Users
+      menu_more: More
+      menu_registration: Registration
+      menu_setting: Settings
+      menu_logout: Logout
+      menu_view: Views
+      caption: Booking Practice Room Online
     footer:
       content: "Made by Hanoi University of Industry students"
       link: "http://dhcnhn.vn"
@@ -24,3 +31,7 @@ en:
     new:
       title: "Loggin"
       login_button: "Log in"
+  users:
+    index:
+      title: All users
+      create: Create

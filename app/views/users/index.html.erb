@@ -1,0 +1,10 @@
+<% provide(:title, t(".title")) %>
+<h1><%= t ".title" %></h1>
+<div class="create_users">
+  <%= form_for :users, url: login_path do |f| %>
+  <%= f.submit t(".create"), class: "btn btn-primary" %>
+  <% end %>
+</div>
+<ul class="users">
+  <%= render "user" %>
+</ul>

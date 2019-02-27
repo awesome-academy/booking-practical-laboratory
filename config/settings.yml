@@ -1,2 +1,7 @@
 size_width: 290
 size_logo: 100
+page_limit: 30
+pass_minimum: 6
+email_maximum: 255
+gravatar_for_help: 80
+gravatar_for_index: 50
