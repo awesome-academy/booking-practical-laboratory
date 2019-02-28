@@ -5,3 +5,4 @@ pass_minimum: 6
 email_maximum: 255
 gravatar_for_help: 80
 gravatar_for_index: 50
+one_remember: "1"

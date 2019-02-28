@@ -1,12 +1,14 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
   TYPE = %w(Admin Teacher).freeze
   attr_reader :remember_token
   has_many :forms, dependent: :destroy
   has_many :using_rooms, through: :form
   validates :email, presence: true, length: {maximum: Settings.email_maximum},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
-  validates :password, presence: true, length: {minimum: Settings.pass_minimum}
+  validates :password, presence: true, length: {minimum: Settings.pass_minimum},
+    allow_nil: true
   before_save :downcase_email
   has_secure_password
 
@@ -26,7 +28,7 @@ class User < ApplicationRecord
   end
 
   def remember
-    self.remember_token = User.new_token
+    @remember_token = User.new_token
     update remember_digest: User.digest(remember_token)
   end
 

@@ -31,7 +31,10 @@ en:
     new:
       title: "Loggin"
       login_button: "Log in"
-  users:
-    index:
-      title: All users
-      create: Create
+      remmember: "Rememberme"
+      h1: "Login"
+  controllers:
+    users_controller: 
+      content_users: "Welcome to The booking practice room "
+      content_errousers: "error" 
+  erro_login: "Invalid email/password combination"
