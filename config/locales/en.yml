@@ -1,6 +1,4 @@
 en:
-  success: Founded!
-  danger: Not founded!
   static_pages:
     home:
       title: "Home"
@@ -11,6 +9,8 @@ en:
       view: "View"
       search: "Search..."
   layouts:
+    application:
+      title: Booking Practical Laboratory
     header:
       menu_home: "Home"
       menu_about: "About"
@@ -31,10 +31,15 @@ en:
     new:
       title: "Loggin"
       login_button: "Log in"
-      remmember: "Rememberme"
-      h1: "Login"
-  controllers:
-    users_controller: 
-      content_users: "Welcome to The booking practice room "
-      content_errousers: "error" 
-  erro_login: "Invalid email/password combination"
+  users:
+    index:
+      title: All users
+      create: Create
+    user:
+      delete: Delete
+      sure: You sure?
+    controller:
+      destroy_success: Deleted
+      destroy_danger: Not delete
+      find_success: Founded!
+      find_danger: Not show, because could not find this user!

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BookingPracticalLaboratory</title>
+    <title><%= t ".title" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
@@ -14,7 +14,7 @@
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
     </div>
-    <%= yield %>
+      <%= yield %>
     <%= render "layouts/footer" %>
   </body>
 </html>
