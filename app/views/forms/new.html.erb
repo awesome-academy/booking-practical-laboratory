@@ -1,0 +1,25 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title"%></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3", id="form">
+    <%= form_for @form do |f| %>
+
+      <%= f.label :phone, t(".phone") %>
+      <%= f.telephone_field :phone, class: "form-control" %><br>
+
+      <%= f.label :room_id, t(".room") %>
+      <%= f.select :room_id, Room.all.collect {|p| [p.name, p.id]},
+        class: "form-control" %><br>
+
+      <%= f.label :time_id, t(".time") %>
+      <%= f.select :time_id, TimeSheet.all.collect {|p| [p.time, p.id]},
+        class: "form-control" %><br>
+
+      <%= f.label :intent, t(".intent") %>
+      <%= f.text_field :intent, class: "form-control" %><br>
+
+      <%= f.submit t(".create"), class: "btn btn-primary", id:"create_form" %>
+    <% end %>
+  </div>
+</div>

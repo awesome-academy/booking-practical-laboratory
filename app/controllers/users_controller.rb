@@ -1,13 +1,19 @@
 class UsersController < ApplicationController
+  before_action :correct_user, only: %i(edit update)
   before_action :find_user, only: %i(show destroy)
 
   def index
     @users = User.page(params[:page]).per Settings.page_limit
   end
 
+  def new
+    @user = User.new
+  end
+
   def show
     return if @user.present?
-    redirect_to users_path
+    flash[:error] = t ".not"
+    redirect_to signup_path
   end
 
   def create
@@ -30,19 +36,25 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def edit; end
+
   private
 
-  def find_user
-    if @user = User.find_by(id: params[:id])
-      flash[:success] = t ".controller.find_success"
-    else
-      flash[:danger] = t ".controller.find_danger"
-      redirect_to root_path
-    end
+  def user_params
+    params.require(:user).permit :name, :email, :password,
+      :password_confirmation
   end
 
-  def user_params
-    params.require(:user)
-          .permit :name, :email, :password, :password_confirmation
+  def find_user
+    @user = User.find_by id: params[:id]
+  end
+
+  def correct_user
+    find_user
+    redirect_to root_url unless current_user? @user
+  end
+
+  def admin_user
+    redirect_to root_url unless current_user.admin?
   end
 end

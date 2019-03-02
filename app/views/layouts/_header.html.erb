@@ -3,27 +3,29 @@
     <div class="logo">
       <%= link_to image_tag("dh cong nghiep.jpg", class: "header_img"), root_path %>
     </div>
-    <div class="menu">
-      <ul>
-        <li><%= link_to t(".menu_home"), root_path %></li>
-        <li><%= link_to t(".menu_about"), "#" %></li>
-        <li><%= link_to t(".menu_users"), users_path %></li>
-        <li><%= link_to t(".menu_english"), locale:"en" %></li>
-        <li><%= link_to t(".menu_vietnamese"), locale:"vi" %></li>
-          <li class="dropdown">
-            <%= link_to t(".menu_more"), "#", class:"dropbtn" %>
-            <div class="dropdown-content">
-              <%= link_to t(".menu_view"), "#" %>
-              <%= link_to t(".menu_registration"), "#" %>
-              <%= link_to t(".menu_setting"), "#" %>
-              <%= link_to t(".menu_logout"), logout_path, method: :delete %>
-            </div>
-          </li>
-          <li><%= link_to t(".menu_login"), login_path %></li>
-      </ul>
-    </div>
-    <div class="caption">
-      <h2><%= t ".caption" %></h2>
-    </div>
+      <div class="menu">
+        <ul>
+          <li><%= link_to t(".menu_home"), root_path %></li>
+          <li><%= link_to t(".menu_about"), "#" %></li>
+          <% if logged_in? %>
+              <li><%= link_to t(".menu_users"), users_path %></li>
+          <% else %>
+            <li><%= link_to t(".menu_login"), login_path %></li>
+          <% end %>
+          <li><%= link_to t(".menu_english"), locale:"en" %></li>
+          <li><%= link_to t(".menu_vietnamese"), locale:"vi" %></li>
+          <% if logged_in? %>
+            <li class="dropdown">
+              <%= link_to t(".menu_more"), "#", class:"dropbtn" %>
+              <div class="dropdown-content">
+                <%= link_to t(".menu_view"), "#" %>
+                <%= link_to t(".menu_registration"), forms_new_path %>
+                <%= link_to t(".menu_setting"), "#" %>
+                <%= link_to t(".menu_logout"), logout_path, method: :delete %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
   </header>
 </section>

@@ -43,3 +43,21 @@ en:
       destroy_danger: Not delete
       find_success: Founded!
       find_danger: Not show, because could not find this user!
+  forms:
+    new:
+      title: Booking Room
+      create: Create Form
+      room: Room
+      time: Time
+      intent: Intent
+    show:
+      title: Checking schedule
+      showform: Created Form
+      name: Name
+      room: Room name
+      time: Time
+      intent: Intent
+      phone: Phone number
+    controller:
+      success: Created Form, Waiting active...
+      danger: Don't create form, check again please!
